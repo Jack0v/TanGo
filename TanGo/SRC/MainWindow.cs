@@ -88,9 +88,7 @@ namespace TanGo
 		}
 
 		void SetSettings()
-		{	
-//https://stackoverflow.com/questions/4448771/c-sharp-form-transparencykey-working-different-for-different-colors-why
-			//окно становится прозрачным для мыши когда красный==синий
+		{	//окно становится прозрачным для мыши когда красный==синий
 			//цвет прозрачности для главного окна не должен совпадать с другими цветами
 			int Blue = 1;
 			int WindowColor = unchecked((int)0xFF000001);
@@ -248,7 +246,7 @@ namespace TanGo
 		}
 
 		protected override void OnPaint(PaintEventArgs e)
-		{	if(NumberDictionary>=0 || SettingsMode)  //на случай если удалить слвоарь во время показа
+		{	if(NumberDictionary>=0 || SettingsMode)  //на случай если удалить словарь во время показа
 			{	string WordText, ValueText;
 				if(SettingsMode)
 				{	WordText		= "{Слово}";
@@ -675,7 +673,7 @@ namespace TanGo
 				double DistanceToWord = 0, DistanceToValue = 0;
 				Grab = 0;		//указатьель попал на окно
 				if(WordBounds.Contains(e.Location))
-				{	Grab = 1;	//указатьель попал на слово
+				{	Grab = 1;	//указатель попал на слово
 					Point Center = new Point((WordBounds.Left + WordBounds.Right) / 2, (WordBounds.Top + WordBounds.Bottom) / 2);
 					int X = Center.X - e.X;
 					int Y = Center.Y - e.Y;
@@ -684,7 +682,7 @@ namespace TanGo
 					WordBind.Y = (float)(e.Y - WordBounds.Y) / (float)WordBounds.Height;
 				}
 				if(ValueBounds.Contains(e.Location))
-				{	Grab = 2;	//указатьель попал на значение
+				{	Grab = 2;	//указатель попал на значение
 					Point Center = new Point((ValueBounds.Left + ValueBounds.Right) / 2, (ValueBounds.Top + ValueBounds.Bottom) / 2);
 					int X = Center.X - e.X;
 					int Y = Center.Y - e.Y;
@@ -753,3 +751,4 @@ namespace TanGo
 		//\обработчики режима настроек
 	}
 }
+
