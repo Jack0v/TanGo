@@ -16,7 +16,7 @@ namespace TanGo
 			
 			//настройка окна открытия файла
 			OpenFileDialog.Title = "Выбор словаря (*.txt)";
-			OpenFileDialog.Filter = "Тексовые файлы UTF-8(без bom)(*.txt)|*.txt";
+			OpenFileDialog.Filter = "Текстовые файлы UTF-8(без bom)(*.txt)|*.txt";
 			OpenFileDialog.FileName = "*.txt";
 			OpenFileDialog.FilterIndex = 1;
 		}
@@ -152,4 +152,5 @@ LABEL_CONTINUE:;
 			}
 		}
 	}
+
 }
