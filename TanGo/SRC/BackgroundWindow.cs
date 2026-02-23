@@ -23,7 +23,6 @@ namespace TanGo
 		protected override CreateParams CreateParams
 		{	get
 			{	CreateParams cp = base.CreateParams;
-				//скрытие из Alt+Tab и панели задач
 				cp.ExStyle |= 0x80;
 				return cp;
 			}
@@ -47,25 +46,6 @@ namespace TanGo
 					e.Graphics.FillPath(brush, Path);
 			}
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		}
+	}
 }
+
